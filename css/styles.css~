@@ -33,18 +33,15 @@ img {
 
 /* =================== CABECERA (HEADER) =================== */
 .main-header {
-  background: transparent;
-  box-shadow: none;
-  position: absolute;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
+  z-index: 100;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-header.header-shrunk {
-  position: fixed;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
@@ -226,7 +223,7 @@ img {
 .bloquePrincipal {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 120px 5% 100px; /* Aumentado padding-top para compensar el header absoluto */
+  padding: 60px 5% 100px; /* Aumentado espaciado general */
 }
 
 /* FONDO AZUL FIJO (HERO) */
@@ -295,10 +292,8 @@ h4 {
   }
 
   .bg-blue-fixed {
-    height: 60vh; /* Reducido de 100vh para que se vea mejor la imagen de "ordenador" */
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
+    height: 100vh; /* Mantener 100vh en móvil para evitar saltos */
+    background-attachment: scroll; /* Mejor rendimiento en móvil */
   }
 
   .hero-logo-img {
@@ -527,8 +522,6 @@ h4 {
   max-height: 90%;
   object-fit: contain;
   transition: transform 0.5s ease;
-  display: block;
-  margin: 0 auto;
 }
 
 .catalogo-item:hover .item-image img {
