@@ -3,6 +3,7 @@
 /* =================== VARIABLES Y CONFIGURACIÓN =================== */
 html {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 :root {
@@ -24,6 +25,9 @@ body {
   color: #1a2332;
   background: #fdfdfd;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -83,6 +87,7 @@ img {
   max-height: 70px;
   width: auto;
   display: block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-container {
@@ -104,6 +109,19 @@ img {
 
 .menu-toggle {
   display: none;
+}
+
+/* ESTADOS DE CABECERA ENCOGIDA */
+.main-header.header-shrunk .logo {
+  max-height: 45px;
+}
+
+.main-header.header-shrunk .header-container {
+  padding: 5px 5%;
+}
+
+.main-header.header-shrunk {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* DISEÑO RESPONSIVO DE CABECERA */
@@ -128,6 +146,7 @@ img {
     justify-content: space-between;
     padding: 10px 5%;
     gap: 0;
+    transition: padding 0.3s ease;
   }
 
   .logo-wrapper {
@@ -243,9 +262,10 @@ img {
 }
 
 .bloquePrincipal {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 120px 5% 100px;
+  position: relative;
+  z-index: 1;
+  padding: 120px 5% 100px; /* Suficiente para el header fijo */
+  flex: 1 0 auto; /* Permite que el contenido principal crezca para empujar el footer */
 }
 
 /* El fondo azul (Hero) ahora está integrado en el contenedor principal */
@@ -452,7 +472,8 @@ h4 {
   background-attachment: scroll;
   /* Cambiado a scroll para mantener proporción */
   color: var(--white);
-  aspect-ratio: 1500 / 375;
+  aspect-ratio: 1500 / 600; /* Menos estirado que el 4:1 anterior */
+  min-height: 480px; /* Seguridad para que quepan las tarjetas */
   margin-bottom: 0;
   position: relative;
   width: 100vw;
@@ -462,6 +483,8 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .no-top-padding {
@@ -659,6 +682,7 @@ h4 {
   margin-top: auto;
   position: relative;
   z-index: 10;
+  flex-shrink: 0;
 }
 
 .footer-container {

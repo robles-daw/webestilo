@@ -60,12 +60,26 @@
                     });
                 });
 
+                // Lógica para encoger el logo/cabecera
+                const updateHeaderStats = () => {
+                    if (window.scrollY > 50) {
+                        headerEl.classList.add('header-shrunk');
+                    } else {
+                        headerEl.classList.remove('header-shrunk');
+                    }
+                };
+
+                // Verificar estado inicial al cargar
+                updateHeaderStats();
+
                 // Lógica de ocultar/mostrar cabecera al hacer scroll
                 let lastScrollY = window.scrollY;
                 const threshold = 10;
 
                 window.addEventListener('scroll', () => {
                     const currentScrollY = window.scrollY;
+                    updateHeaderStats();
+
                     const portada = document.querySelector('.portada');
                     const portadaHeight = portada ? portada.offsetHeight : 300;
 
