@@ -530,15 +530,14 @@ h4 {
 }
 
 .item-image img {
-.item-image img {
-  width: auto; /* Cambiado de 100% para evitar conflictos de centrado */
+  width: auto;
   height: auto;
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   transition: transform 0.5s ease;
   display: block;
-  margin: auto; /* El centrado más robusto en flex */
+  margin: 0 auto !important; /* Forzado de centrado */
 }
 
 .catalogo-item:hover .item-image img {
@@ -1079,7 +1078,7 @@ h4 {
   }
 
   .bloquePrincipal {
-    padding: 160px 5% 60px; /* Aumentado aún más para dejar aire al título bajo el header fijo */
+    padding: 180px 5% 60px; /* Separación extra para el header fijo en móviles */
   }
 
   .item-image {
