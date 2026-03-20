@@ -253,14 +253,22 @@ img {
   z-index: 1;
   background: transparent;
   width: 100%;
-  min-height: 100vh;
-  /* Devolvemos el alto de pantalla completa globalmente */
+  aspect-ratio: 1500 / 863;
   display: flex;
   flex-direction: column;
   background-image: url('../assets/img/cabecera.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
+}
+
+/* En dispositivos móviles/tablets forzamos pantalla completa para la portada */
+@media (max-width: 768px) {
+  .hero-intro-scroll-container {
+    min-height: 100vh !important;
+    aspect-ratio: auto;
+    /* Anulamos la proporción para que cubra todo el alto */
+  }
 }
 
 .hero-intro-scroll-container .bloquePrincipal {
@@ -270,8 +278,8 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0 5%;
-  margin-top: 90px;
-  /* Recuperamos el margen original para el diseño de 100vh */
+  margin-top: 60px;
+  /* Reducido para caber en el nuevo aspecto */
 }
 
 .portada-redesign {
@@ -1120,6 +1128,10 @@ h4 {
     /* Devolvemos el padding de 180px para que el texto baje en el diseño de 100vh */
   }
 
+  .hero-intro-scroll-container .bloquePrincipal {
+    padding-top: 60px;
+    /* Ajuste fino para móviles */
+  }
 
   .item-image {
     padding: 10px;
