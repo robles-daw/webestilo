@@ -301,7 +301,7 @@ h4 {
 
 @media (max-width: 768px) {
   .portada-redesign {
-    height: 35vh;
+    height: 100%;
   }
 
   .bg-blue-fixed {
