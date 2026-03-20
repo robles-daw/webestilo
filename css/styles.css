@@ -310,8 +310,9 @@ h4 {
     background-attachment: scroll;
     background-position: center center;
     background-size: cover;
-    z-index: 0;
-    /* Cambiado de -1 para asegurar visibilidad en móviles */
+    z-index: -1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 
   .hero-logo-img {
@@ -552,7 +553,7 @@ h4 {
   transition: transform 0.5s ease;
   display: block;
   margin: 0 auto !important;
-  /* Forzado de centrado */
+  float: none !important;
 }
 
 .catalogo-item:hover .item-image img {
@@ -630,7 +631,8 @@ h4 {
   background-color: var(--blue);
   color: var(--white);
   margin-top: auto;
-
+  position: relative;
+  z-index: 10;
 }
 
 .footer-container {
