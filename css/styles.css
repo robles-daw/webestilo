@@ -1116,8 +1116,19 @@ h4 {
   }
 
   .bloquePrincipal {
-    padding: 180px 5% 60px;
-    /* Separación extra para el header fijo en móviles */
+    padding: 120px 5% 60px;
+    /* Reducido de 180px para que quepa mejor en el nuevo alto del hero */
+  }
+
+  /* Reducimos el tamaño de las imágenes/secciones con fondo en móviles */
+  .hero-intro-scroll-container {
+    min-height: 55vh !important;
+    background-attachment: scroll; /* Aseguramos que sea scroll en móviles para evitar saltos */
+  }
+
+  .section-elegirnos {
+    padding: 30px 0 !important;
+    background-attachment: scroll !important;
   }
 
   .item-image {
