@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caligrafía - La Estilográfica Moderna</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <script src="../js/header-include.js" data-active="caligrafía"></script>
+
+
+
+    <div class="bloquePrincipal">
+        <!-- Introducción -->
+        <div class="section-intro reveal">
+            <h2 class="titulo-moderno">Nuestra Selección de Caligrafía</h2>
+            <p class="subtitulo-moderno">Explora la elegancia de la escritura a través de nuestros documentos
+                exclusivos. Haz clic en cada estilo para visualizar el PDF.</p>
+        </div>
+
+        <div class="pdf-gallery-container reveal">
+            <div class="pdf-row row-3">
+                <a href="#" class="pdf-btn" data-pdf="../assets/pdf/caligra-aleman022.pdf">
+                    <img src="../assets/img/letras/aleman.PNG" alt="Alemán">
+                </a>
+                <a href="#" class="pdf-btn" data-pdf="../assets/pdf/caligra-comercial026.pdf">
+                    <img src="../assets/img/letras/comercial.PNG" alt="Comercial">
+                </a>
+                <a href="#" class="pdf-btn" data-pdf="../assets/pdf/caligra-espanol025.pdf">
+                    <img src="../assets/img/letras/espanol.PNG" alt="Español">
+                </a>
+            </div>
+            <div class="pdf-row row-4" style="margin-top: 30px;">
+                <a href="#" class="pdf-btn" data-pdf="../assets/pdf/caligra-gotico028.pdf">
+                    <img src="../assets/img/letras/gotico.PNG" alt="Gótico">
+                </a>
+                <a href="#" class="pdf-btn" data-pdf="../assets/pdf/caligra-ingles030.pdf">
+                    <img src="../assets/img/letras/ingles.PNG" alt="Inglés">
+                </a>
+                <a href="#" class="pdf-btn" data-pdf="../assets/pdf/caligra-redondilla027.pdf">
+                    <img src="../assets/img/letras/redondilla.PNG" alt="Redondilla">
+                </a>
+                <a href="#" class="pdf-btn" data-pdf="../assets/pdf/caligra-vertical029.pdf">
+                    <img src="../assets/img/letras/vertical.PNG" alt="Vertical">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visor de PDF -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="pdfIframe" src="" width="100%" height="100%" style="border: none;"></iframe>
+        </div>
+    </div>
+
+    <script src="../js/caligrafia.js"></script>
+    <script src="../js/footer-include.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+
+</html>

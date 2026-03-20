@@ -1,0 +1,17 @@
+Quitar servicio a domicilio
+Tipografia titulos
+Tamaño texto footer
+Interpolar secciones para destacarlas
+Quitar mayusculas sobrantes (Ya esta en los h2)
+Añadir movimiento
+Encabezados mas pequeños (Menos inicio)
+Aumentar cantidad de Logotipos en carrousel de marcas (https://stcucalon.com/proyectos/)
+
+Cambiar nombre de ubicacion a contacto
+
+En ubicacion quitar papeleria subtitulo
+
+
+https://nsc-abogados.com/
+
+Modernizar generalmente pagina

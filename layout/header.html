@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - La Estilográfica Moderna</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo a la izquierda -->
+            <div class="logo-wrapper">
+                <a href="../index.html">
+                    <img src="../assets/img/logo.jpg" alt="La Estilográfica Moderna" class="logo">
+                </a>
+            </div>
+
+            <!-- Menú de Navegación al centro (en desktop) -->
+            <nav class="menu-container">
+                <a href="../index.html">Inicio</a>
+                <a href="../views/servicios.html">Servicios</a>
+                <a href="../views/caligrafia.html">Caligrafía</a>
+                <a href="../views/ubicacion.html">Contacto</a>
+            </nav>
+
+            <!-- Horarios a la derecha (en desktop) -->
+            <div class="horario-container">
+                <div class="horario-item">
+                    <h4 class="dia-titulo">Lunes a Viernes</h4>
+                    <div class="hora-info">Mañanas: <span class="time">10:00–13:00</span></div>
+                    <div class="hora-info">Tardes: <span class="time">17:00–20:00</span></div>
+                </div>
+                <div class="horario-item">
+                    <h4 class="dia-titulo">Sábados</h4>
+                    <h4 class="time">10:00–13:00</h4>
+                    <div class="hora-info">Tardes: <span class="status-closed">Cerrado</span></div>
+                </div>
+            </div>
+
+            <!-- Botón de menú para móviles (oculto en desktop) -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+
+</body>
+
+</html>
