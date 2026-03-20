@@ -91,6 +91,7 @@ img {
   display: flex;
   gap: 25px;
   align-items: center;
+  margin-left: 70px;
 }
 
 .horario-container {
@@ -204,15 +205,17 @@ img {
 }
 
 .hora-info {
-  font-size: 0.8rem;
+  font-size: 15px;
   color: #555;
   margin-bottom: 2px;
 }
 
 .time {
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 600;
   color: #333;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
 .status-closed {
@@ -253,7 +256,7 @@ img {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url('../assets/img/cabecera.PNG');
+  background-image: url('../assets/img/cabecera.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Efecto Parallax */
@@ -439,7 +442,7 @@ h4 {
 
 /* SECCIÓN POR QUÉ ELEGIRNOS */
 .section-elegirnos {
-  background-image: url('../assets/img/fondoSeccionIndex.PNG');
+  background-image: url('../assets/img/fondoSeccionIndex.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
