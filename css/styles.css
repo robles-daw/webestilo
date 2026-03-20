@@ -536,11 +536,9 @@ h4 {
 .item-image {
   background: #fff;
   aspect-ratio: 16/10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block !important; /* Brute force centering */
+  text-align: center !important;
   padding: 15px;
-  /* Reducido para dar más aire a la imagen */
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -551,7 +549,7 @@ h4 {
   max-height: 100%;
   object-fit: contain;
   transition: transform 0.5s ease;
-  display: block;
+  display: inline-block !important; /* Centrado por text-align del padre */
   margin: 0 auto !important;
   float: none !important;
 }
@@ -1104,11 +1102,9 @@ h4 {
   }
 
   .item-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 5px;
-    /* Menos espacio muerto para que la imagen sea más grande en móvil */
+    display: block !important;
+    text-align: center !important;
   }
 }
 
