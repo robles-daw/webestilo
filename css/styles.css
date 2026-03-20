@@ -305,7 +305,7 @@ h4 {
   }
 
   .bg-blue-fixed {
-    height: 60vh;
+    height: 100%;
     /* Reducido de 100vh para que se vea mejor la imagen de "ordenador" */
     background-attachment: scroll;
     background-position: center center;
