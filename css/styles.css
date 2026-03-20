@@ -107,9 +107,11 @@ img {
 
 /* DISEÑO RESPONSIVO DE CABECERA */
 @media (max-width: 1024px) {
-  .main-header {
+  .main-header,
+  .main-header.header-shrunk {
     background: #ffffff !important;
-    position: absolute;
+    position: absolute !important;
+    top: 0 !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
