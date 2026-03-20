@@ -254,7 +254,7 @@ img {
   background: transparent;
   width: 100%;
   min-height: 100vh;
-  min-height: 100dvh; /* Alto dinámico para móviles (iPhone/Safari) */
+  /* Devolvemos el alto de pantalla completa globalmente */
   display: flex;
   flex-direction: column;
   background-image: url('../assets/img/cabecera.jpg');
@@ -269,8 +269,9 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 5% !important; /* Forzamos para evitar el padding global de móvil */
-  margin-top: 100px; /* Espacio para el header fijo */
+  padding: 0 5%;
+  margin-top: 90px;
+  /* Recuperamos el margen original para el diseño de 100vh */
 }
 
 .portada-redesign {
@@ -439,7 +440,8 @@ h4 {
   background-image: url('../assets/img/fondoSeccionIndex.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: scroll; /* Cambiado a scroll para mantener proporción */
+  background-attachment: scroll;
+  /* Cambiado a scroll para mantener proporción */
   color: var(--white);
   aspect-ratio: 1500 / 375;
   margin-bottom: 0;
