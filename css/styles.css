@@ -259,13 +259,14 @@ img {
   background-image: url('../assets/img/cabecera.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: scroll; /* Cambiado de fixed a scroll para mejor control de encuadre */
+  background-attachment: scroll;
 }
 
-/* En dispositivos móviles/tablets aseguramos que no crezca demasiado */
-@media (max-width: 1024px) {
+/* En dispositivos móviles/tablets forzamos pantalla completa para la portada */
+@media (max-width: 768px) {
   .hero-intro-scroll-container {
-    aspect-ratio: 1500 / 863;
+    min-height: 100vh !important;
+    aspect-ratio: auto; /* Anulamos la proporción para que cubra todo el alto */
   }
 }
 
@@ -1120,8 +1121,8 @@ h4 {
   }
 
   .bloquePrincipal {
-    padding: 120px 5% 60px;
-    /* Reducido de 180px para que quepa mejor en el nuevo alto del hero */
+    padding: 180px 5% 60px;
+    /* Devolvemos el padding de 180px para que el texto baje en el diseño de 100vh */
   }
 
   .hero-intro-scroll-container .bloquePrincipal {
