@@ -253,7 +253,8 @@ img {
   z-index: 1;
   background: transparent;
   width: 100%;
-  min-height: 100vh; /* Devolvemos el alto de pantalla completa globalmente */
+  min-height: 100vh;
+  min-height: 100dvh; /* Alto dinámico para móviles (iPhone/Safari) */
   display: flex;
   flex-direction: column;
   background-image: url('../assets/img/cabecera.jpg');
@@ -268,8 +269,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 5%;
-  margin-top: 90px; /* Recuperamos el margen original para el diseño de 100vh */
+  padding: 0 5% !important; /* Forzamos para evitar el padding global de móvil */
+  margin-top: 100px; /* Espacio para el header fijo */
 }
 
 .portada-redesign {
