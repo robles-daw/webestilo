@@ -65,11 +65,6 @@
                 const threshold = 10;
 
                 window.addEventListener('scroll', () => {
-                    if (window.innerWidth <= 1024) {
-                        headerEl.classList.remove('header-hidden');
-                        return;
-                    }
-
                     const currentScrollY = window.scrollY;
                     const portada = document.querySelector('.portada');
                     const portadaHeight = portada ? portada.offsetHeight : 300;
