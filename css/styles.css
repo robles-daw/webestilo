@@ -152,6 +152,7 @@ img {
     background: rgba(253, 253, 253, 0.98);
     backdrop-filter: blur(10px);
     border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-left: 0 !important; /* Reseteamos el margen que lo desplaza en móvil */
   }
 
   .main-header.menu-open .menu-container,
