@@ -253,19 +253,19 @@ img {
   z-index: 1;
   background: transparent;
   width: 100%;
-  min-height: 100vh;
+  aspect-ratio: 1500 / 863;
   display: flex;
   flex-direction: column;
   background-image: url('../assets/img/cabecera.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Efecto Parallax */
+  background-attachment: scroll; /* Cambiado de fixed a scroll para mejor control de encuadre */
 }
 
-/* En dispositivos móviles/tablets desactivamos parallax para evitar bugs visuales */
+/* En dispositivos móviles/tablets aseguramos que no crezca demasiado */
 @media (max-width: 1024px) {
   .hero-intro-scroll-container {
-    background-attachment: scroll;
+    aspect-ratio: 1500 / 863;
   }
 }
 
@@ -276,7 +276,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0 5%;
-  margin-top: 90px; /* Espacio para el header fijo/absoluto */
+  margin-top: 60px; /* Reducido para caber en el nuevo aspecto */
 }
 
 .portada-redesign {
@@ -445,15 +445,18 @@ h4 {
   background-image: url('../assets/img/fondoSeccionIndex.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll; /* Cambiado a scroll para mantener proporción */
   color: var(--white);
-  padding: 50px 0;
+  aspect-ratio: 1500 / 375;
   margin-bottom: 0;
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .no-top-padding {
@@ -860,6 +863,7 @@ h4 {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  height: 75%;
 }
 
 .close-modal {
@@ -1120,15 +1124,8 @@ h4 {
     /* Reducido de 180px para que quepa mejor en el nuevo alto del hero */
   }
 
-  /* Reducimos el tamaño de las imágenes/secciones con fondo en móviles */
-  .hero-intro-scroll-container {
-    min-height: 55vh !important;
-    background-attachment: scroll; /* Aseguramos que sea scroll en móviles para evitar saltos */
-  }
-
-  .section-elegirnos {
-    padding: 30px 0 !important;
-    background-attachment: scroll !important;
+  .hero-intro-scroll-container .bloquePrincipal {
+    padding-top: 60px; /* Ajuste fino para móviles */
   }
 
   .item-image {
