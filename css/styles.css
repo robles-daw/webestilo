@@ -538,6 +538,33 @@ h4 {
   }
 }
 
+@media (max-width: 768px) {
+  .section-elegirnos {
+    aspect-ratio: auto;
+    min-height: auto;
+    width: 100%;
+    margin-left: 0;
+    left: auto;
+    transform: none;
+    align-items: flex-start;
+    padding: 56px 5%;
+  }
+
+  .elegirnos-overlay {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .section-elegirnos h2 {
+    font-size: 2rem;
+    margin-bottom: 28px;
+  }
+
+  .benefit-card {
+    padding: 26px 20px;
+  }
+}
+
 .benefit-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
@@ -1184,6 +1211,7 @@ ul.footer-list li {
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin: 60px 0;
+  margin-bottom: 0px;
 }
 
 .service-card {
@@ -1229,7 +1257,7 @@ ul.footer-list li {
 
 /* =================== SECCIÓN DE MARCAS (REDISTRIBUCIÓN) =================== */
 .brands-redesign {
-  margin-top: 100px;
+  margin-top: 20px;
   padding: 60px 0;
   background: white;
   padding-bottom: 0px;
