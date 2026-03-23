@@ -1066,6 +1066,13 @@ h4 {
   z-index: 1000;
   transition: transform 0.3s ease, background-color 0.3s ease;
   text-decoration: none;
+  animation: subirBajar 3s ease-in-out infinite;
+}
+
+@keyframes subirBajar {
+  0% { transform: translateY(0); }
+  33% { transform: translateY(-2px); }
+  66% { transform: translateY(2px); }
 }
 
 @media (hover: hover) {
